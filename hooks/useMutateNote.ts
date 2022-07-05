@@ -17,7 +17,7 @@ export const useMutateNote = () => {
     },
     {
       onSuccess: () => {
-        revalidateList() //pages/api/revalidate/index.tsの処理が実行(noteページが再生成)
+        // revalidateList() //pages/api/revalidate/index.tsの処理が実行(noteページが再生成)
         reset() //初期化
         alert('Successfully completed!!')
       },
@@ -40,7 +40,7 @@ export const useMutateNote = () => {
     },
     {
       onSuccess: (res) => {
-        revalidateList() //pages/api/revalidate/index.tsの処理が実行(noteページが再生成)
+        // revalidateList() //pages/api/revalidate/index.tsの処理が実行(noteページが再生成)
         revalidateSingle(res[0].id) //詳細ページも更新
         reset() //初期化
         alert('Successfully completed!!')
@@ -61,7 +61,7 @@ export const useMutateNote = () => {
     },
     {
       onSuccess: () => {
-        revalidateList() //pages/api/revalidate/index.tsの処理が実行(noteページが再生成)
+        // revalidateList() //pages/api/revalidate/index.tsの処理が実行(noteページが再生成)
         reset() //初期化
         alert('Successfully completed!!')
       },
