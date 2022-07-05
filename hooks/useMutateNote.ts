@@ -10,7 +10,7 @@ export const useMutateNote = () => {
 
   //noteの新規作成
   const createNoteMutation = useMutation(
-    async (note: Omit<Note, 'created_at' | 'user_id' | 'comments'>) => {
+    async (note: Omit<Note, 'created_at' | 'id' | 'comments'>) => {
       const { data, error } = await supabase.from('notes').insert(note)
       if (error) throw new Error(error.message)
       return data

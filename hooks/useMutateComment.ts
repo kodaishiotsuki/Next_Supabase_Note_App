@@ -10,7 +10,7 @@ export const useMutateComment = () => {
 
   //commentの新規作成
   const createCommentMutation = useMutation(
-    async (comment: Omit<Comment, 'created_at' | 'user_id' | 'note_id'>) => {
+    async (comment: Omit<Comment, 'created_at' | 'id'>) => {
       const { data, error } = await supabase.from('comments').insert(comment)
       if (error) throw new Error(error.message)
       return data
